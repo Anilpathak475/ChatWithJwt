@@ -36,6 +36,6 @@ class JacksonConfiguration {
 
     @Bean
     fun objectMapper(): ObjectMapper {
-        return ObjectMapper().registerModule(KotlinModule())
+        return ObjectMapper().registerModule(KotlinModule.Builder().build())
     }
 }
