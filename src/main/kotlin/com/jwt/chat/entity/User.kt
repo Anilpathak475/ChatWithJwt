@@ -12,8 +12,11 @@ class User {
     lateinit var id: UUID
 
     @Column
-    var userName: String? = null
+    lateinit var fullName: String
 
     @Column
-    var password: String? = null
+    lateinit var userName: String
+
+    @Column
+    lateinit var password: String
 }

@@ -4,6 +4,7 @@ import com.jwt.chat.entity.Message
 import com.jwt.chat.repositories.MessageRepository
 import com.jwt.chat.repositories.UserRepository
 import org.springframework.stereotype.Service
+import java.util.Date
 
 @Service
 class MessageService(private val messageRepository: MessageRepository, private val userRepository: UserRepository) {
@@ -12,12 +13,12 @@ class MessageService(private val messageRepository: MessageRepository, private v
         return messageRepository.findAll()
     }
 
-    fun getMessageById(userId:String, messageId:Long): Message? {
-        return messageRepository.findById(messageId).orElse(null)
+    fun getMessageBySenderAndReceiver(sender: String, receiver: String): List<Message>? {
+        return messageRepository.findMessagesByFromUserAndToUser(fromUser = sender, toUser = receiver)
     }
 
     fun sendMessage(from: String, to: String, content: String): Message {
-        val message = Message()
+        val message = Message(fromUser = from, toUser = to, messageText = content, creationTime = Date())
         return messageRepository.save(message)
     }
 }

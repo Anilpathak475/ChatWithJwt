@@ -5,17 +5,28 @@ import java.util.*
 
 @Entity
 @Table(name = "message_chat")
-class Message {
+class Message() {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     lateinit var id: UUID
 
-    var fromUser: String? = null
+    lateinit var fromUser: String
 
-    var toUser: String? = null
+    lateinit var toUser: String
 
-    var messageText: String? = null
+    lateinit var messageText: String
 
-    val creationTime: Date? = null
+    lateinit var creationTime: Date
 
+    constructor(
+        fromUser: String,
+        toUser: String,
+        messageText: String,
+        creationTime: Date
+    ) : this() {
+        this.fromUser = fromUser
+        this.toUser = toUser
+        this.messageText = messageText
+        this.creationTime = creationTime
+    }
 }

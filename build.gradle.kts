@@ -19,6 +19,11 @@ repositories {
 }
 
 dependencies {
+    implementation("org.postgresql:postgresql:42.6.0")
+    implementation("org.postgresql:postgresql")
+    implementation("org.jetbrains.exposed:exposed-core:0.41.1")
+    implementation("org.jetbrains.exposed:exposed-dao:0.41.1")
+    implementation("org.jetbrains.exposed:exposed-jdbc:0.41.1")
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -26,7 +31,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    runtimeOnly("com.h2database:h2")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.16.1")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
