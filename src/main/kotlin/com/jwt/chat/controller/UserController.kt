@@ -1,7 +1,7 @@
 package com.jwt.chat.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.jwt.chat.entity.User
+//import com.jwt.chat.entity.User
 /*
 import com.jwt.chat.service.UserService
 */
