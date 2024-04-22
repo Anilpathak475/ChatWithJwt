@@ -1,3 +1,4 @@
+/*
 package com.jwt.chat.service
 
 import com.jwt.chat.entity.Message
@@ -24,3 +25,4 @@ class MessageService(private val messageRepository: MessageRepository, private v
 }
 
 
+*/
