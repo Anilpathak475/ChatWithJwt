@@ -35,8 +35,8 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
-    implementation("org.springframework.boot:spring-boot-starter-security")
-    implementation("org.springframework.security:spring-security-jwt")
+    /*implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.security:spring-security-jwt")*/
 
 
     // Other dependencies...
