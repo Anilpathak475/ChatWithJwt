@@ -1,4 +1,3 @@
-/*
 package com.jwt.chat.service
 
 import com.jwt.chat.repositories.UserRepository
@@ -12,4 +11,4 @@ class LoginService(private val userRepository: UserRepository) {
         val user = userRepository.findByUserName(userName)
         return user != null && user.password == password
     }
-}*/
+}

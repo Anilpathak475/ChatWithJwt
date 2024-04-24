@@ -1,4 +1,3 @@
-/*
 package com.jwt.chat.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -36,4 +35,3 @@ class MessageController(private val messageService: MessageService) {
 }
 
 data class SendMessageRequest(val content: String)
-*/

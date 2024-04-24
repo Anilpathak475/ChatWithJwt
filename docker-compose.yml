@@ -9,14 +9,14 @@ services:
     depends_on:
       - db
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
-      - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/chatapp_db
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
 
   db:
     image: postgres
     environment:
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_PASSWORD=admin
     volumes:
       - db-data:/var/lib/postgresql/data
 

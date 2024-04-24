@@ -1,10 +1,8 @@
 package com.jwt.chat.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
-//import com.jwt.chat.entity.User
-/*
+import com.jwt.chat.entity.User
 import com.jwt.chat.service.UserService
-*/
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.bind.annotation.*
@@ -12,18 +10,17 @@ import com.fasterxml.jackson.module.kotlin.KotlinModule
 import org.springframework.beans.factory.annotation.Autowired
 
 @RestController
-class UserController(/*private val userService: UserService*/) {
+class UserController(private val userService: UserService) {
 
     @Autowired
     private lateinit var objectMapper: ObjectMapper
 
     @GetMapping("/user")
-    fun getAllUsers()/*: List<User>*/ {
-        println("Getting all users")
-        /*return userService.getAllUsers()*/
+    fun getAllUsers(): List<User> {
+        return userService.getAllUsers()
     }
 
-   /* @PostMapping("/user")
+    @PostMapping("/user")
     fun createUser(@RequestBody user: User): User {
         return userService.createUser(user)
     }
@@ -31,7 +28,7 @@ class UserController(/*private val userService: UserService*/) {
     @GetMapping("/user/{userName}")
     fun getUserById(@PathVariable userName: String): User? {
         return userService.getUserByUserName(userName)
-    }*/
+    }
 }
 
 @Configuration

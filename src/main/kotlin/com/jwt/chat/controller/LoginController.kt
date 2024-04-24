@@ -1,4 +1,3 @@
-/*
 package com.jwt.chat.controller
 
 import com.jwt.chat.service.LoginService
@@ -41,4 +40,4 @@ class LoginController(private val loginService: LoginService) {
 data class LoginRequest(val userName: String, val password: String)
 
 
-data class LoginResponse(val token: String)*/
+data class LoginResponse(val token: String)

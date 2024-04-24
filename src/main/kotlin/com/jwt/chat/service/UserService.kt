@@ -1,4 +1,3 @@
-/*
 package com.jwt.chat.service
 
 import com.jwt.chat.entity.User
@@ -23,4 +22,3 @@ class UserService(private val userRepository: UserRepository) {
     fun getUserByUserName(userName: String): User? = userRepository.findByUserName(userName)
 
 }
-*/

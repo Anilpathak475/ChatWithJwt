@@ -1,6 +1,5 @@
 package com.jwt.chat.entity
 
-/*
 import jakarta.persistence.*
 import java.util.UUID
 
@@ -21,4 +20,3 @@ class User {
     @Column
     lateinit var password: String
 }
-*/

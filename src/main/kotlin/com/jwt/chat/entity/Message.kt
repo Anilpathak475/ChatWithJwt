@@ -1,6 +1,5 @@
 package com.jwt.chat.entity
 
-/*
 import jakarta.persistence.*
 import java.util.*
 
@@ -31,4 +30,3 @@ class Message() {
         this.creationTime = creationTime
     }
 }
-*/
